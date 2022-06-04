@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(230, 230, 230);
+    cursor: default;
+}
+body {
+    width: 300px;
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: #292e3a;
+}
+
+.header-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.header-text h2 {
+    margin-left: 5px;
+}
+
+.header-text h2 span {
+    color: #ce1312;
+}
+
+.thanks-title {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.download-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.download {
+    padding: 10px;
+    border-radius: 2px;
+    margin-bottom: 8px;
+    background: #121418;
+}
+
+.download-title {
+    font-weight: 700;
+    margin-bottom: 5px;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-bar {
+    border-radius: 10px;
+    width: 100%;
+    height: 8px;
+    background: rgba(179, 172, 172, 0.3);
+    margin: 4px 0;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 10px;
+    background: rgb(18, 153, 231);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #bbbaba;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #555;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.complete .size-quality,
+.complete .progress-bar,
+.complete .status-percent,
+.failed .size-quality,
+.failed .progress-bar,
+.failed .status-percent,
+.waiting .size-quality,
+.waiting .progress-bar,
+.waiting .status-percent {
+    display: none;
+}
+.processing-text {
+    display: none;
+}
+.processing .status-percent {
+    display: none;
+}
+.processing .processing-text {
+    display: flex;
+}
+
+.failed-text button,
+.waiting-text button {
+    cursor: pointer !important;
+    border: none;
+    padding: 2px 4px;
+    color: #121418;
+    border-radius: 2px;
+    color: white;
+}
+
+.failed-text button {
+    background: #ce1312;
+}
+
+.waiting-text button {
+    background: #f2994a;
+}
+
+.failed-text button:hover,
+.waiting-text button:hover {
+    background: #555;
+}
+.complete-text,
+.failed-text,
+.waiting-text {
+    display: none;
+}
+.complete .complete-text,
+.failed .failed-text,
+.waiting .waiting-text {
+    display: flex;
+}
+
+.complete .complete-text p {
+    color: #27ae60;
+    font-weight: 700;
+}
+.complete:hover {
+    background: rgb(56, 56, 56, 0.5);
+}
+
+.failed:hover {
+    background: rgb(56, 56, 56, 0.5);
+}
+
+.failed .failed-text p {
+    color: #ce1312;
+    font-weight: 700;
+}
+
+.waiting .waiting-text p {
+    color: #f2994a;
+    font-weight: 700;
+}
+
+.failed .failed-text p svg,
+.complete .complete-text p svg,
+.waiting .waiting-text p svg {
+    margin-right: 4px;
+}
+
+.failed .failed-text p {
+    display: flex;
+    align-items: center;
+}
+
+.complete *,
+.complete {
+    cursor: pointer;
+}
+
+.failed *,
+.failed {
+    cursor: pointer;
+}
+
+.downloading {
+    position: relative;
+    transition: height 1s ease-in-out;
+}
+
+.cancel-downloading-btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 2px 4px;
+    border-radius: 2px;
+}
+
+.cancel-downloading-btn * {
+    cursor: pointer;
+}
+
+.cancel-downloading-btn:hover {
+    background: rgb(201, 160, 160, 0.7);
+}
